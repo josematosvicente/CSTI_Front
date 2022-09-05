@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>Requerimientos</h1>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Titulo</th>
+          <th>Descripcion</th>
+          <th>Asignado a:</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let request of requests | async">
+          <td>{{request.title}}</td>
+          <td>{{request.description}}</td>
+          <td>{{request.assigned}}</td>
+          <td><button (click)="deleteRequest(request.id)">Actualizar</button>
+          </td><td>
+            <button (click)="deleteRequest(request.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

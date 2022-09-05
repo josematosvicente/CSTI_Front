@@ -1,0 +1,26 @@
+<h3>Registrar Requerimiento</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Titulo</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="req.title" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Descripcion</label>
+      <textarea type="text"  class="form-control" id="lastName" required [(ngModel)]="req.description" name="lastName"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Asignado</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="req.assigned" name="emailId">
+    </div>
+
+    <button type="submit" class="btn btn-success">Registrar Requerimiento</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newRequest()">Add</button> -->
+</div>

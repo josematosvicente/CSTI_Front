@@ -1,0 +1,21 @@
+<div *ngIf="request">
+  <div>
+    <label>Name: </label> {{request.firstName}}
+  </div>
+  <div>
+    <label>Age: </label> {{request.lastName}}
+  </div>
+  <div>
+    <label>Active: </label> {{request.emailId}}
+  </div>
+  <div>
+    <label>Active: </label> {{request.active}}
+  </div>
+
+  <span class="button is-small btn-primary" (click)='updateActive(false)'>Update</span>
+
+
+  <span class="button is-small btn-danger" (click)='deleteRequest()'>Delete</span>
+
+  <hr/>
+</div>
